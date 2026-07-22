@@ -6,6 +6,7 @@ export default function Record() {
         name: "",
         position: "",
         level: "",
+        age: ""
     });
     const [isNew, setIsNew] = useState(true);
     const params = useParams();
@@ -71,7 +72,7 @@ export default function Record() {
         } catch (error) {
             console.error('A problem occurred with your fetch operation: ', error);
         } finally {
-            setForm({ name: "", position: "", level: "" });
+            setForm({ name: "", position: "", level: "", age: "" });
             navigate("/");
         }
     }
@@ -112,6 +113,27 @@ export default function Record() {
                                         placeholder="First Last"
                                         value={form.name}
                                         onChange={(e) => updateForm({ name: e.target.value })}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="sm:col-span-4">
+                            <label
+                                htmlFor="age"
+                                className="block text-sm font-medium leading-6 text-slate-900"
+                            >
+                                Age
+                            </label>
+                            <div className="mt-2">
+                                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-slate-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                    <input
+                                        type="number"
+                                        name="age"
+                                        id="age"
+                                        className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-slate-900 placeholder:text-slate-400 focus:ring-0 sm:text-sm sm:leading-6"
+                                        placeholder="25"
+                                        value={form.age}
+                                        onChange={(e) => updateForm({ age: e.target.value })}
                                     />
                                 </div>
                             </div>

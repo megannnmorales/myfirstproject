@@ -32,6 +32,9 @@ const Record = (props) => (
                 </button>
             </div>
         </td>
+        <td className="p-4 align-middle [&:has([role=checkbox])]:pr-0">
+            {props.record.age}
+        </td>
     </tr>
 );
 
@@ -96,6 +99,9 @@ export default function RecordList() {
                             </th>
                             <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0">
                                 Action
+                            </th>
+                            <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0">
+                                Age
                             </th>
                         </tr>
                         </thead>
