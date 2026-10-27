@@ -16,9 +16,6 @@ I followed the tutorial step by step to get hands-on practice with a full JavaSc
 - Building a React frontend with Vite, React Router and Tailwind CSS
 - Connecting the client to the API with `fetch`
 
-## What I changed or added
-- [Anything that's yours. If nothing, delete this section rather than padding it.]
-
 ## Running it
 1. Clone the repo
 2. In `server/`, create a `config.env` with your own `ATLAS_URI` and `PORT=5050`
